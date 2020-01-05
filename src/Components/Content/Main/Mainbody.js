@@ -23,6 +23,7 @@ const Styles = styled.div`
   @media only screen and (min-width: 900px) {
     .wrapper {
       display: flex;
+
     }
     .projectContainer {
       width: 75%;

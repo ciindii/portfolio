@@ -5,12 +5,10 @@ import '../../fonts.css';
 import worldmap from '../../../../img/worldmap.png';
 import avatar from '../../../../img/avatar.png';
 const Styles = styled.div`
-
   div {
     padding: 20px;
     margin: 0 auto;
     height: auto;
-
   }
   h2 {
     ${'' /* text-align: center;
@@ -33,37 +31,6 @@ const Styles = styled.div`
     letter-spacing: 1px;
     font-size: 13px;
     line-height: 20px;
-  }
-  .cindy {
-    font-family: 'Sacramento', cursive;
-    font-size: 20px;
-    text-align: right;
-    padding-top: 2px;
-    opacity: .7;
-  }
-  .avatar {
-    background: url(${avatar}) no-repeat;
-    background-size: 30%;
-    padding: 0;
-    height: 170px;
-    background-position: center;
-  }
-  .map {
-    background: url(${worldmap}) no-repeat;
-    background-size: 65%;
-    margin-top: -40px;
-    height: 250px;
-    background-position: center;
-  }
-  .location {
-    text-align: center;
-    margin-top: -60px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: .8em;
-  }
-  .location span {
-    color: red;
-    opacity: .6;
   }
   button {
     background-color: pink;
@@ -93,28 +60,15 @@ const Styles = styled.div`
   }
 
   @media only screen and (min-width: 900px) {
-    .wrapper {
-      float: right;
-    }
     div {
       padding-top: 0px;
+      float: right;
     }
     h2 {
       opacity: .9;
     }
     hr {
       width: 20%;
-    }
-    .map {
-      margin-top: -80px;
-      background-size: 100%;
-      height: 250px;
-    }
-    .location {
-      text-align: center;
-      margin-top: -60px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: .8em;
     }
     button {
       color: white;
@@ -138,51 +92,31 @@ const Styles = styled.div`
       margin: 0 auto;
 
   }
-  @media only screen and (min-width: 900px) {
-    .wrapper {
-      float: right;
-    }
-  }
   @media only screen and (min-width: 1120px) {
-
-    .map {
-      margin-top: -30px;
-      background-size: 100%;
-      height: 250px;
-    }
-    .location {
-      text-align: center;
-      margin-top: -25px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: .8em;
-    }
-    p {
-      font-size: .9em;
-      text-align: center;
-    }
+  }
 
 `;
 
-const Info = () => (
+const Contact = () => (
   <Styles>
-    <div className="wrapper">
-      <h2>about me</h2>
-      <div className="avatar" />
-      <p>
-      "Hello I'm Cindy, a web developer based in Seattle, WA. I recently fell in love with the React.js libary. I also use Git for version control, CSS frameworks such as Bootstrap 4 and Materialize, and some farmility with Node.js. On my free time i like to mess around with vector graphics or doodle with Procreate."
-        <br/>
-
-      </p>
-      <div className="cindy">-cindy</div>
-
-
-      <h2>location</h2>
-      <div className="map" />
-      <div className="location">
-        <span><MDBIcon icon="map-marker-alt" /></span> Seattle, Wa
+    <div>
+      <h2>contact me</h2>
+      <div className="contactButton">
+          <button>
+            <a href="#!" className="email-ic mr-3">
+              <MDBIcon icon="envelope" /> email me </a>
+         </button>
+         <button>
+           <a href="#!" className="email-ic mr-3">
+             <MDBIcon fab icon="instagram" /> follow me </a>
+        </button>
+        <button>
+          <a href="#!" className="email-ic mr-3">
+            <MDBIcon icon="download" /> Résumé </a>
+       </button>
       </div>
-      </div>
+    </div>
   </Styles>
 );
 
-export default Info;
+export default Contact;

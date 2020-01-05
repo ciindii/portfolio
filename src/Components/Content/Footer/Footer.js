@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div`
+  .center {
+    
+  }
   p {
     font-size: 13px;
     text-transform: uppercase;

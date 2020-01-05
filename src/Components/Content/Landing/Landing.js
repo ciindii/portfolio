@@ -41,6 +41,11 @@ const Styles = styled.div`
     padding-top: 0;
     font-size: 1.5em;
   }
+  @media only screen and (min-width: 900px) {
+    .jumbo {
+      float: right;
+    }
+  }
 `;
 
 const Landing = () => (

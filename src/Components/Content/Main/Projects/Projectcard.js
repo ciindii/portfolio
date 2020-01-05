@@ -12,7 +12,8 @@ const Styles = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    ${'' /* margin: 0 auto; */}
+
   }
   .projectdiv {
     ${'' /* max-width: 300px; */}
@@ -137,7 +138,11 @@ const Styles = styled.div`
       margin-right: 40px;
     }
   }
-
+  @media only screen and (min-width: 900px) {
+    .wrapper {
+      float: right;
+    }
+  }
 `;
 
 class Projectcard extends React.Component {
