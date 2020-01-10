@@ -5,6 +5,7 @@ import "./Projectcard.css"
 import photo from '../../../../img/ellieproject-card.png';
 import styled from 'styled-components';
 
+
 const Styles = styled.div`
   .wrapper {
     ${'' /* background-color: pink; */}
@@ -12,7 +13,7 @@ const Styles = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    ${'' /* margin: 0 auto; */}
+    margin: 0 auto;
 
   }
   .projectdiv {
@@ -41,6 +42,7 @@ const Styles = styled.div`
     border-bottom: solid 1px gray;
     padding: 10px;
     margin-bottom: 40px;
+    padding-top: 50px;
   }
   h2 {
     font-family: 'Montserrat', sans-serif;
@@ -111,12 +113,11 @@ const Styles = styled.div`
 
   @media only screen and (min-width: 768px) {
     .wrapper {
-      ${'' /* background-color: pink; */}
+
       display: flex;
       flex-direction: column;
       max-width: 600px;
       height: 100%;
-      margin: 0 auto;
     }
     .projectdiv {
       max-width: 500px;
@@ -140,8 +141,11 @@ const Styles = styled.div`
   }
   @media only screen and (min-width: 900px) {
     .wrapper {
-      margin-left: 400px ;
-
+      ${'' /* margin-left: 400px ; */}
+      position: relative;
+      right: -200px;
+      margin: 0 auto;
+      padding-right: 70px;
     }
   }
 `;
@@ -157,7 +161,20 @@ class Projectcard extends React.Component {
           date: '2018 - 2019' ,
           description: 'Ellie Beauty House is a permanent makeup and lash studio located in Seattle, WA. This  is  a mobile resposnsive business site, featuring 5 static web pages highlighting company\'s work for potential clients.  ',
           image: require("../../../../img/ellieproject-card.png"),
+          tools: "Bootstrap4, JavaScript, Inskscape, Photoshop",
+          task: "empty" ,
+          challenges:"-adapting design to fit well on mobile and desktop",
 
+
+        },
+        {
+          title: 'Cindy Portfolio',
+          date: 2019 ,
+          description: 'A fresh beauty startup focused on spa services, lash extentions and customed wigs. Emphasized elegant UI with help with  AOS, animate.css, and bootstrap4. Construced SVG logo with Inkscape and Photoshop.',
+          image: require("../../../../img/prolificE-card.png"),
+          tools: "React.js, React Router, Styled Components",
+          task: "empty",
+          challenges:"-adapting design to fit well on mobile and desktop",
         },
         {
           title: 'Prolific Elegance',
@@ -183,6 +200,12 @@ class Projectcard extends React.Component {
                 <img src={item.image} />
                 <h3><span>//</span>summary</h3>
                 <p>{item.description}</p>
+                <h3>tools</h3>
+                <p>{item.tools}</p>
+                <h3>task</h3>
+                <p>{item.task}</p>
+                <h3>challenges</h3>
+                <p>{item.challenges}</p>
                 <div className="btnWrapper">
                   <button
                     type="button"

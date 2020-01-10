@@ -13,7 +13,8 @@ import {
   Route,
   Switch,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
+import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div `
   .navbar {
@@ -32,29 +33,41 @@ const Styles = styled.div `
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-
-    &:hover {
-      opacity: .5;
-      letter-spacing: .5px;
-      cursor: pointer;
-    }
   }
-  @media only screen and (min-width: 992px){
-    ${'' /* .navbar {
-      position: fixed;
-      width: 400px;
+    ul {
+      list-style: none !important;
     }
-    Nav {
-      display: flex;
-      flex-direction: column;
-    } */}
+
+  }
+  @media only screen and (min-width: 900px){
     .navbar{
       height: 100%;
       width: 30%;
       position: fixed;
     }
-    li {
-      list-style: none;
+
+    li a {
+      color: #fff;
+      font-size: 2em;
+        &:hover {
+          opacity: .5;
+          padding-left: 10px;
+          letter-spacing: .5px;
+          cursor: pointer;
+        }
+    }
+
+    .lgNavResume {
+      margin: 0 auto;
+      display: block;
+    }
+    .lgNavResume button,
+    .lgNavResume a {
+      font-size: .9em;
+      margin: 20px;
+      border: none;
+      color: #fff;
+      background-color: transparent;
     }
   }
 `;
@@ -102,28 +115,32 @@ class NavigationBar extends React.Component {
       </Router> */}
 
         <Router>
-          
+
           <div className="navbar">
             <ul>
-
+              <Logo />
               <li><Link to="/Home">Home</Link></li>
               <li><Link to="/Projects">Projects</Link></li>
               <li><Link to="/About">About</Link></li>
               <li><Link to="/Contact">Contact</Link></li>
+              <li>
+                <div className="lgNavResume">
+                  <button className="lgNavResume">
+                    <a href="#!" className="email-ic mr-3">
+                      <MDBIcon icon="download" /> Résumé </a>
+                 </button>
+               </div>
+              </li>
             </ul>
             {/* <Footer /> */}
-          </div>
+
+            </div>
                 <Route exact path='/' component={Landing}></Route>
                 <Route exact path='/Projects' component={Projectcard}></Route>
                 <Route exact path='/About' component={Info}></Route>
                 <Route exact path='/Contact' component={Contact}></Route>
 
-
-
         </Router>
-
-
-
 
 
       </Styles>

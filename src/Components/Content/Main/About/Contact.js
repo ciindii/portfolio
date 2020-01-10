@@ -18,6 +18,7 @@ const Styles = styled.div`
     text-align: right;
     border-bottom: solid 1px gray;
     padding: 10px;
+    padding-top: 50px;
     margin-bottom: 40px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -62,8 +63,11 @@ const Styles = styled.div`
   @media only screen and (min-width: 900px) {
     .wrapper {
       padding-top: 0px;
-      margin-left: 400px ;
-      margin-bottom: 200px;
+      position: relative;
+      right: -200px;
+      padding-right: 70px;
+      margin: 0 auto;
+      margin-bottom: 150px;
       text-align: center;
     }
     h2 {

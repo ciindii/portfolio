@@ -94,11 +94,15 @@ const Styles = styled.div`
 
   @media only screen and (min-width: 900px) {
     .wrapper {
-      margin-left: 400px ;
+      position: relative;
+      right: -200px;
+      padding-right: 70px;
+      margin: 0 auto;
       text-align: center;
     }
     h2 {
       opacity: .9;
+      padding-top: 50px;
     }
     hr {
       width: 20%;
@@ -142,11 +146,6 @@ const Styles = styled.div`
       margin: 0 auto;
 
   }
-  @media only screen and (min-width: 900px) {
-    .wrapper {
-
-    }
-  }
   @media only screen and (min-width: 1120px) {
 
     .map {
@@ -173,7 +172,7 @@ const Info = () => (
       <h2>about me</h2>
       <div className="avatar" />
       <p>
-      "Hello I'm Cindy, a web developer based in Seattle, WA. I recently fell in love with the React.js libary. I also use Git for version control, CSS frameworks such as Bootstrap 4 and Materialize, and some farmility with Node.js. On my free time i like to mess around with vector graphics or doodle with Procreate."
+      "Hello I'm Cindy, a web developer based in Seattle, WA. I recently fell in love with the React.js libary. I also use Git for version control, CSS frameworks such as Bootstrap 4 and Materialize, and some farmility with Node.js. On my free time I like to mess around with vector graphics or doodle with Procreate."
         <br/>
 
       </p>
