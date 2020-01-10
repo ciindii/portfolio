@@ -8,7 +8,7 @@ const Styles = styled.div`
 
   .container {
     max-width: 900px;
-    
+
   }
 }
 

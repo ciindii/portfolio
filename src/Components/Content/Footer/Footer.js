@@ -3,9 +3,15 @@ import styled from 'styled-components';
 import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div`
-  .center {
-    
-  }
+.wrapper {
+  position: relative;
+}
+.sticky{
+  position: sticky;
+
+}
+
+  ${'' /* create different divs for lg and sm screen then hide and show them */}
   p {
     font-size: 13px;
     text-transform: uppercase;
@@ -41,6 +47,7 @@ const Styles = styled.div`
     width: 100%;
   }
 
+
   @media only screen and (min-width: 425px) {
     .mr-3 {
       padding: 15px;
@@ -54,6 +61,8 @@ const Styles = styled.div`
 
 const Footer = () => (
   <Styles>
+    <div className="wrapper">
+      <div className="sticky">
     <div className="center">
       <div className="flex">
         <a href="https://www.linkedin.com/in/cindy-truong-848002156/" target="_blank" className="li-ic mr-3">
@@ -69,6 +78,8 @@ const Footer = () => (
     </div>
   <div className="copyrightdiv">
     <p className="copyright">cindy truong &copy; {(new Date().getFullYear())}</p>
+    </div>
+  </div>
   </div>
   </Styles>
 )

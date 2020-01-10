@@ -140,7 +140,8 @@ const Styles = styled.div`
   }
   @media only screen and (min-width: 900px) {
     .wrapper {
-      float: right;
+      margin-left: 400px ;
+
     }
   }
 `;

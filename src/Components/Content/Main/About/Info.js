@@ -94,10 +94,8 @@ const Styles = styled.div`
 
   @media only screen and (min-width: 900px) {
     .wrapper {
-      float: right;
-    }
-    div {
-      padding-top: 0px;
+      margin-left: 400px ;
+      text-align: center;
     }
     h2 {
       opacity: .9;
@@ -105,14 +103,20 @@ const Styles = styled.div`
     hr {
       width: 20%;
     }
+    .avatar {
+      background-size: 30%;
+      margin: 30px;
+      height: 170px;
+      background-position: center;
+    }
     .map {
-      margin-top: -80px;
-      background-size: 100%;
+      margin: 20px 0;
+      background-size:75%;
       height: 250px;
     }
     .location {
       text-align: center;
-      margin-top: -60px;
+      margin-bottom: 20px;
       font-family: 'Montserrat', sans-serif;
       font-size: .8em;
     }
@@ -140,7 +144,7 @@ const Styles = styled.div`
   }
   @media only screen and (min-width: 900px) {
     .wrapper {
-      float: right;
+
     }
   }
   @media only screen and (min-width: 1120px) {

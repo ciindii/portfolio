@@ -60,9 +60,11 @@ const Styles = styled.div`
   }
 
   @media only screen and (min-width: 900px) {
-    div {
+    .wrapper {
       padding-top: 0px;
-      float: right;
+      margin-left: 400px ;
+      margin-bottom: 200px;
+      text-align: center;
     }
     h2 {
       opacity: .9;
@@ -99,7 +101,7 @@ const Styles = styled.div`
 
 const Contact = () => (
   <Styles>
-    <div>
+    <div className="wrapper">
       <h2>contact me</h2>
       <div className="contactButton">
           <button>

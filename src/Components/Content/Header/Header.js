@@ -102,6 +102,7 @@ class NavigationBar extends React.Component {
       </Router> */}
 
         <Router>
+          
           <div className="navbar">
             <ul>
 
@@ -110,7 +111,7 @@ class NavigationBar extends React.Component {
               <li><Link to="/About">About</Link></li>
               <li><Link to="/Contact">Contact</Link></li>
             </ul>
-            <Footer />
+            {/* <Footer /> */}
           </div>
                 <Route exact path='/' component={Landing}></Route>
                 <Route exact path='/Projects' component={Projectcard}></Route>
