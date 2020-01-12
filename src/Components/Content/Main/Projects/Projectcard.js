@@ -14,6 +14,7 @@ const Styles = styled.div`
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding: 50px;
 
   }
   .projectdiv {
@@ -161,26 +162,26 @@ class Projectcard extends React.Component {
           date: '2018 - 2019' ,
           description: 'Ellie Beauty House is a permanent makeup and lash studio located in Seattle, WA. This  is  a mobile resposnsive business site, featuring 5 static web pages highlighting company\'s work for potential clients.  ',
           image: require("../../../../img/ellieproject-card.png"),
-          tools: "Bootstrap4, JavaScript, Inskscape, Photoshop",
-          task: "empty" ,
-          challenges:"-adapting design to fit well on mobile and desktop",
+          tools: "Bootstrap4 | JavaScript | Inskscape | Photoshop",
+          task: "adapting design to fit well on mobile and desktop",
 
 
         },
         {
           title: 'Cindy Portfolio',
-          date: 2019 ,
-          description: 'A fresh beauty startup focused on spa services, lash extentions and customed wigs. Emphasized elegant UI with help with  AOS, animate.css, and bootstrap4. Construced SVG logo with Inkscape and Photoshop.',
+          date: 2020 ,
+          description: 'My official web developer  portfolio. Originally consisted of  jQuery and Javascript, the site  had a whole facelift using  React.js The goal was to create a simple, clean and easy to navigate UI using React components.  ',
           image: require("../../../../img/prolificE-card.png"),
-          tools: "React.js, React Router, Styled Components",
-          task: "empty",
-          challenges:"-adapting design to fit well on mobile and desktop",
+          tools: "React.js | React Router | Styled Components",
+          task: "Generated scalable components for small and large screens. Implemented different navigation layouts to optimize easy to use UI. Incorperated React Router for navigation links. Designed images using Procreate and Photoshop. ",
         },
         {
           title: 'Prolific Elegance',
           date: 2019 ,
-          description: 'A fresh beauty startup focused on spa services, lash extentions and customed wigs. Emphasized elegant UI with help with  AOS, animate.css, and bootstrap4. Construced SVG logo with Inkscape and Photoshop.',
-          image: require("../../../../img/prolificE-card.png")
+          description: 'A fresh beauty startup focused on spa services, lash extentions and customed wigs.',
+          image: require("../../../../img/prolificE-card.png"),
+          tools: "AOS - Animate On Scroll library using CSS3 | Bootstrap4 | Inkscape for logo design",
+          task: "Generated scalable components for small and large screens. Implemented different navigation layouts to optimize easy to use UI. Incorperated React Router for navigation links. Designed images using Procreate and Photoshop. ",
         },
 
       ]
@@ -200,12 +201,10 @@ class Projectcard extends React.Component {
                 <img src={item.image} />
                 <h3><span>//</span>summary</h3>
                 <p>{item.description}</p>
-                <h3>tools</h3>
+                <h3><span>//</span>tools</h3>
                 <p>{item.tools}</p>
-                <h3>task</h3>
+                <h3><span>//</span>task</h3>
                 <p>{item.task}</p>
-                <h3>challenges</h3>
-                <p>{item.challenges}</p>
                 <div className="btnWrapper">
                   <button
                     type="button"

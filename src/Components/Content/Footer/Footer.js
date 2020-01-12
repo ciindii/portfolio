@@ -57,6 +57,16 @@ const Styles = styled.div`
       width: 300px;
     }
   }
+  @media only screen and (min-width: 900px) {
+    .wrapper {
+      margin: 0 auto;
+      padding: 50px;
+      position: relative;
+      right: -200px;
+      margin: 0 auto;
+      ${'' /* padding-right: 70px; */}
+    }
+  }
 `;
 
 const Footer = () => (

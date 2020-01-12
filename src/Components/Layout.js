@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
 
+
 @media only screen and (min-width: 900px) {
 
   .container {

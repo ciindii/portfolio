@@ -1,30 +1,21 @@
 import React, { Fragment } from "react";
-import { Jumbotron, Container } from 'react-bootstrap';
+// import { Jumbotron, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import computer from '../../../img/computer.webp';
-import { MDBBtn } from "mdbreact";
-// import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol,  MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText } from "mdbreact";
+// import { MDBBtn } from "mdbreact";
 import './Landing.css';
 
 const Styles = styled.div`
-  .jumbo {
-    background: url(${computer}) no-repeat fixed bottom;
-    background-size: cover;
-    color: #efefef;
-    height: 600px;
-    position: relative;
+  .wrapper {
+    ${'' /* background: url(${computer}) no-repeat fixed bottom; */}
+    ${'' /* background-size: cover; */}
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px;
     z-index: -2;
   }
-
-  .overlay {
-    background-color: #000;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+  .landingimg {
+    width: 600px;
   }
   h1, p {
       font-family: 'Libre Baskerville';
@@ -34,31 +25,41 @@ const Styles = styled.div`
     font-weight: bolder;
     letter-spacing: 2px;
     font-family: 'Libre Baskerville';
+    padding-top: 20px;
     margin-bottom: 0;
-    margin-top: 130px;
+    color: rgb(206, 132, 96);
   }
   p {
     padding-top: 0;
     font-size: 1.5em;
+    color: #494749;
   }
   @media only screen and (min-width: 900px) {
-    .jumbo {
-      float: right;
+    .wrapper {
+      color: #efefef;
+      text-align: center;
+      margin: 0 auto;
+      padding: 50px;
+      position: relative;
+      right: -200px;
+      margin: 0 auto;
+      padding-right: 70px;
     }
   }
 `;
 
 const Landing = () => (
   <Styles>
-    <Jumbotron fluid className="jumbo">
+    <div fluid className="wrapper">
       <div className="overlay">
       </div>
-      <Container>
+      <div>
+        <img className="landingimg" src={require('../../../img/computer.webp')} />
         <h1>Cindy Truong</h1>
         <p>web developer.</p>
 
-      </Container>
-    </Jumbotron>
+      </div>
+    </div>
   </Styles>
 )
 

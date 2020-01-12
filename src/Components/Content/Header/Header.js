@@ -18,8 +18,10 @@ import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div `
   .navbar {
-    background-color: pink;
+    background-color: rgb(206, 132, 96);
     height: 100%;
+    width: auto;
+    overflow: hidden;
   }
 
    a, .navbar-brand, .navbar-nav .nav-link {
@@ -119,7 +121,7 @@ class NavigationBar extends React.Component {
           <div className="navbar">
             <ul>
               <Logo />
-              <li><Link to="/Home">Home</Link></li>
+              <li><Link to="/">Home</Link></li>
               <li><Link to="/Projects">Projects</Link></li>
               <li><Link to="/About">About</Link></li>
               <li><Link to="/Contact">Contact</Link></li>

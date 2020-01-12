@@ -7,7 +7,7 @@ import avatar from '../../../../img/avatar.png';
 const Styles = styled.div`
 
   div {
-    padding: 20px;
+    padding: 50px;
     margin: 0 auto;
     height: auto;
 

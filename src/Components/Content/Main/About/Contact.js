@@ -6,14 +6,11 @@ import worldmap from '../../../../img/worldmap.png';
 import avatar from '../../../../img/avatar.png';
 const Styles = styled.div`
   div {
-    padding: 20px;
+    padding: 50px;
     margin: 0 auto;
     height: auto;
   }
   h2 {
-    ${'' /* text-align: center;
-    font-family: 'Sacramento', cursive;
-    padding-top: 10px; */}
     color: gray;
     text-align: right;
     border-bottom: solid 1px gray;
@@ -34,7 +31,7 @@ const Styles = styled.div`
     line-height: 20px;
   }
   button {
-    background-color: pink;
+    background-color: rgb(206, 132, 96);
     border: none;
     color: white;
     width: 100%;
@@ -117,7 +114,7 @@ const Contact = () => (
              <MDBIcon fab icon="instagram" /> follow me </a>
         </button>
         <button>
-          <a href="#!" className="email-ic mr-3">
+          <a href= {`mailto:cindythitruong@gmail.com`} className="email-ic mr-3">
             <MDBIcon icon="download" /> Résumé </a>
        </button>
       </div>
