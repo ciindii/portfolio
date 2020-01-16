@@ -1,14 +1,26 @@
 import React from 'react';
 import './Logo.css'
-import {  MDBNavbarBrand }
-from 'mdbreact';
+import {  MDBNavbarBrand } from 'mdbreact';
+import styled from 'styled-components';
+const Styles = styled.div`
+  .logo {
+    height: 40%;
+  }
+    @media only screen and (min-width: 900px) {
+      .logo {
+        height: 20% !important;
+      }
+    }
+`;
+// import ctLogo from '../../../img/ctLogo.svg';
 
 const Logo = () => {
   return (
-    <MDBNavbarBrand>
-      <span className="cindy">Cindy</span>
-      <span className="truong"> Truong </span>
-    </MDBNavbarBrand>
+    <Styles>
+
+      <img className="logo" src={require('../../../../img/ctLogo.svg')} />
+
+    </Styles>
   )
 }
 

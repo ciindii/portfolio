@@ -48,9 +48,15 @@ const Styles = styled.div `
       position: fixed;
     }
 
+    .logo {
+      ${'' /* margin: 0 auto; */}
+      padding-bottom: 10px;
+      opacity: .8;
+      width: 105px;
+    }
     li a {
       color: #fff;
-      font-size: 2em;
+      font-size: 1.5em;
         &:hover {
           opacity: .5;
           padding-left: 10px;
@@ -119,8 +125,11 @@ class NavigationBar extends React.Component {
         <Router>
 
           <div className="navbar">
+
             <ul>
-              <Logo />
+              <div className="logo">
+                <Logo />
+              </div>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/Projects">Projects</Link></li>
               <li><Link to="/About">About</Link></li>
