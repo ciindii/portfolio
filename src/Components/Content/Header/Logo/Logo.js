@@ -4,7 +4,7 @@ import {  MDBNavbarBrand } from 'mdbreact';
 import styled from 'styled-components';
 const Styles = styled.div`
   .logo {
-    height: 40%;
+    height: 100%;
   }
     @media only screen and (min-width: 900px) {
       .logo {

@@ -5,6 +5,7 @@ import computer from '../../../img/computer.webp';
 // import { MDBBtn } from "mdbreact";
 import './Landing.css';
 
+
 const Styles = styled.div`
   .wrapper {
     ${'' /* background: url(${computer}) no-repeat fixed bottom; */}
@@ -15,7 +16,7 @@ const Styles = styled.div`
     z-index: -2;
   }
   .landingimg {
-    width: 600px;
+    width: 100%;
   }
   h1, p {
       font-family: 'Libre Baskerville';

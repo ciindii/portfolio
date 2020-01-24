@@ -8,6 +8,7 @@ import Main from '../Main/Mainbody';
 import Info from '../Main/About/Info';
 import Contact from '../Main/About/Contact';
 import Footer from '../Footer/Footer';
+// import Toggle from '../Landing/Toggle';
 import {
   BrowserRouter as Router,
   Route,
@@ -17,11 +18,36 @@ import {
 import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div `
-  .navbar {
+  .navbar-lg {
+    display: none;
+  }
+
+  .navbar-sm {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
     background-color: rgb(206, 132, 96);
-    height: 100%;
-    width: auto;
-    overflow: hidden;
+  }
+
+  ${'' /* .overlay {
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  } */}
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
   }
 
    a, .navbar-brand, .navbar-nav .nav-link {
@@ -42,10 +68,19 @@ const Styles = styled.div `
 
   }
   @media only screen and (min-width: 900px){
-    .navbar{
+    .navbar-lg{
+      display: block;
+      background-color: rgb(206, 132, 96);
+      height: 100%;
+      width: auto;
+      overflow: hidden;
       height: 100%;
       width: 30%;
       position: fixed;
+    }
+
+    .navbar-sm {
+      display: none;
     }
 
     .logo {
@@ -81,51 +116,45 @@ const Styles = styled.div `
 `;
 
 class NavigationBar extends React.Component {
+  state = {
+    on: false,
+  }
+  toggle = () => {
+    this.setState({
+      on: !this.state.on
+    })
+  }
+
   render() {
     return (
       <Styles>
-        {/* <Router>
-        <Navbar expand="lg">
-          <Navbar.Brand href ="/"><Logo /></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-            <Nav.Item>
-              <Nav.Link>
-                <Link to='/'>Home</Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link to='/Projects'>Projects</Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link to="/About">About</Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link to="/Contact">Contact</Link>
-              </Nav.Link>
-            </Nav.Item>
-            </Nav>
-            <Router>
-              <Route exact path='/' component={Landing}></Route>
-              <Route exact path='/Projects' component={Projectcard}></Route>
-              <Route exact path='/About' component={Info}></Route>
-              <Route exact path='/Contact' component={Info}></Route>
-            </Router>
-
-          </Navbar.Collapse>
-        </Navbar>
-      </Router> */}
-
         <Router>
 
-          <div className="navbar">
+          {/* small screen nav */}
+          <div className="navbar-sm">
+            <Logo />
+            <div>
+              <button onClick={this.toggle}>MENU</button>
+              {this.state.on && (
 
+                <div className="overlay">
+                  <div>
+
+                    <ul>
+                      <li><Link to="/">Home</Link></li>
+                      <li><Link to="/Projects">Projects</Link></li>
+                      <li><Link to="/About">About</Link></li>
+                      <li><Link to="/Contact">Contact</Link></li>
+                    </ul>
+                  </div>
+                </div>
+
+              )}
+
+            </div>
+          </div>
+          {/* +900px width screen nav */}
+          <div className="navbar-lg">
             <ul>
               <div className="logo">
                 <Logo />
@@ -144,8 +173,8 @@ class NavigationBar extends React.Component {
               </li>
             </ul>
             {/* <Footer /> */}
-
             </div>
+
                 <Route exact path='/' component={Landing}></Route>
                 <Route exact path='/Projects' component={Projectcard}></Route>
                 <Route exact path='/About' component={Info}></Route>

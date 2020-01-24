@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavigationBar from './Components/Content/Header/Header';
+import Toolbar from './Components/Content/Header/SideNav/Navbar';
 import Layout from './Components/Layout';
 import Landing from './Components/Content/Landing/Landing';
 import Info from './Components/Content/Main/About/Info';
@@ -18,7 +19,8 @@ import {
 const App = () => (
 
   <React.Fragment>
-    <NavigationBar />
+    {/* <NavigationBar /> */}
+    <Toolbar />
       <Layout>
           {/* <Landing />
           <Main /> */}
