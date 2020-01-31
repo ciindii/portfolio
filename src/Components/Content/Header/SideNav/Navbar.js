@@ -14,15 +14,45 @@ import {
 import { MDBIcon, MDBContainer } from 'mdbreact';
 import styled from 'styled-components';
 
-const Styles = styled.div ``;
+const Styles = styled.div `
+  .toolbar {
+    ${'' /* position: fixed;
+    top: 0;
+    left: 0; */}
+    width: 100%;
+    background-color: rgb(206, 132, 96);
+    height: 100px;
+  }
+
+  .toolbar-nav {
+    display: flex;
+    align-items: center;
+    ${'' /* height: 100%; */}
+  }
+  .toolbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .toolbar-links {
+    text-decoration: none;
+    &:hover {
+      color: red;
+    }
+    &:active{
+
+    }
+  }
+`;
 
 const Toolbar = props => (
   <Styles>
-  <header>
-    <nav>
+  <header className="toolbar">
+    <nav className="toolbar-nav">
       <div></div>
-      <div><Logo /></div>
-      <div>
+      <div className="toolbar-logo"><Logo /></div>
+      <div className="toolbar-links">
         <Router>
           <ul>
             {/* <div className="logo">

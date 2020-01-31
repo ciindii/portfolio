@@ -8,6 +8,9 @@ import Main from '../Main/Mainbody';
 import Info from '../Main/About/Info';
 import Contact from '../Main/About/Contact';
 import Footer from '../Footer/Footer';
+import Toolbar from './SideNav/Navbar';
+
+import TabToggleBtn from './SideNav/SideTab/SideTab';
 // import Toggle from '../Landing/Toggle';
 import {
   BrowserRouter as Router,
@@ -30,24 +33,41 @@ const Styles = styled.div `
     background-color: rgb(206, 132, 96);
   }
 
-  ${'' /* .overlay {
-    height: 400px;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
+  .spacer {
+    flex: 1;
+  }
+  .toolbar {
+    ${'' /* position: fixed;
     top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-  } */}
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    left: 0; */}
+    background-color: rgb(206, 132, 96);
+    height: 100px;
+  }
+
+  .toolbar-logo {
+    margin-left: 1rem;
+  }
+
+  .toolbar-nav {
+    display: flex;
+    align-items: center;
+    ${'' /* height: 100%; */}
+  }
+  .toolbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .toolbar-links {
+    text-decoration: none;
+    max-width: 350px;
+    &:hover {
+      color: red;
+    }
+    &:active{
+
+    }
   }
 
    a, .navbar-brand, .navbar-nav .nav-link {
@@ -68,6 +88,7 @@ const Styles = styled.div `
 
   }
   @media only screen and (min-width: 900px){
+
     .navbar-lg{
       display: block;
       background-color: rgb(206, 132, 96);
@@ -130,29 +151,36 @@ class NavigationBar extends React.Component {
       <Styles>
         <Router>
 
-          {/* small screen nav */}
-          <div className="navbar-sm">
-            <Logo />
-            <div>
-              <button onClick={this.toggle}>MENU</button>
-              {this.state.on && (
-
-                <div className="overlay">
-                  <div>
-
-                    <ul>
-                      <li><Link to="/">Home</Link></li>
-                      <li><Link to="/Projects">Projects</Link></li>
-                      <li><Link to="/About">About</Link></li>
-                      <li><Link to="/Contact">Contact</Link></li>
-                    </ul>
-                  </div>
-                </div>
-
-              )}
-
+          <div className="navbar-sm toolbar">
+            <div className="toolbar-nav">
+              <div>
+                <TabToggleBtn />
+              </div>
+              <div className="toolbar-logo"><Logo /></div>
+              <div className="spacer"/>
+              <div className="toolbar-links">
+                  <ul>
+                    {/* <div className="logo">
+                      <Logo />
+                    </div> */}
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/Projects">Projects</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/Contact">Contact</Link></li>
+                    <li>
+                      <div className="lgNavResume">
+                        <button className="lgNavResume">
+                          <a href="#!" className="email-ic mr-3">
+                            <MDBIcon icon="download" /> Résumé </a>
+                       </button>
+                     </div>
+                    </li>
+                  </ul>
+              </div>
             </div>
           </div>
+
+
           {/* +900px width screen nav */}
           <div className="navbar-lg">
             <ul>
@@ -172,7 +200,6 @@ class NavigationBar extends React.Component {
                </div>
               </li>
             </ul>
-            {/* <Footer /> */}
             </div>
 
                 <Route exact path='/' component={Landing}></Route>

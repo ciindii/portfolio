@@ -62,7 +62,7 @@ const Styles = styled.div`
       margin: 0 auto;
       padding: 50px;
       position: relative;
-      right: -200px;
+      ${'' /* right: -200px; */}
       margin: 0 auto;
       ${'' /* padding-right: 70px; */}
     }
