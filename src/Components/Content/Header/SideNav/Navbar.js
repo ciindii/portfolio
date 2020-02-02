@@ -5,6 +5,7 @@ import Landing from '../../Landing/Landing';
 import Main from '../../Main/Mainbody';
 import Info from '../../Main/About/Info';
 import Contact from '../../Main/About/Contact';
+import TabToggleBtn from './SideTab/ToggleTab';
 import {
   BrowserRouter as Router,
   Route,
@@ -54,6 +55,9 @@ const Toolbar = props => (
       <div className="toolbar-logo"><Logo /></div>
       <div className="toolbar-links">
         <Router>
+          <div>
+            <TabToggleBtn click={props.tabClickHandler} />
+          </div>
           <ul>
             {/* <div className="logo">
               <Logo />

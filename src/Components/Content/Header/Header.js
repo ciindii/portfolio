@@ -11,7 +11,7 @@ import Footer from '../Footer/Footer';
 import Toolbar from './SideNav/Navbar';
 
 import TabToggleBtn from './SideNav/SideTab/SideTab';
-// import Toggle from '../Landing/Toggle';
+
 import {
   BrowserRouter as Router,
   Route,

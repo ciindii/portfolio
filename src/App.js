@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './index.css';
 import NavigationBar from './Components/Content/Header/Header';
 import Toolbar from './Components/Content/Header/SideNav/Navbar';
 import Layout from './Components/Layout';
@@ -10,6 +11,9 @@ import Main from './Components/Content/Main/Mainbody';
 import Footer from './Components/Content/Footer/Footer';
 import MainNav from './Components/Content/Header/Navmain';
 import NoMatch from './Components/NoMatch';
+import ToggleTab from './Components/Content/Header/SideNav/SideTab/ToggleTab';
+import OverlayBg from './Components/Content/Header/SideNav/SideTab/Overlay';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -17,16 +21,36 @@ import {
   Link
 } from 'react-router-dom'
 
-const App = () => (
+class App extends React.Component {
+  state = {
+    sideTabOpen: false
+  };
+  tabToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideTabOpen: !prevState.sideTabOpen}
+    });
+  }
+  render() {
+    let sideTab;
+    let backdrop;
+    if (this.state.sideTabOpen){
+      sideTab = <ToggleTab tabClickHandler={this.tabToggleClickHandler}/>;
+      backdrop =<OverlayBg />;
+    }
+    return (
+      <React.Fragment>
+        <div style={{height: '100%'}}>
+        <NavigationBar />
+        {sideTab}
+        {backdrop}
 
-  <React.Fragment>
-    <NavigationBar />
-      {/* <MainNav /> */}
-      <Layout>
-          <Footer />
-      </Layout>
-
-  </React.Fragment>
-);
+          {/* <MainNav /> */}
+          <Layout>
+              <Footer />
+          </Layout>
+          </div>
+      </React.Fragment>
+  )}
+};
 
 export default App;

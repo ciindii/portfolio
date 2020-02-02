@@ -27,7 +27,7 @@ const Styles = styled.div`
 
 const TabToggleBtn = props => (
   <Styles>
-    <button className="toggle-btn">
+    <button className="toggle-btn" onClick={props.click}>
       <div className="toggle-btn_line"></div>
       <div className="toggle-btn_line"></div>
       <div className="toggle-btn_line"></div>
