@@ -21,7 +21,8 @@ const Styles = styled.div`
   .toggle-btn_line {
     width: 30px;
     height: 2px;
-    background: white;
+    background: red
+    ;
   }
 `;
 

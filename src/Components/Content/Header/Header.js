@@ -70,7 +70,7 @@ const Styles = styled.div `
     }
   }
 
-   a, .navbar-brand, .navbar-nav .nav-link {
+   ${'' /* a, .navbar-brand, .navbar-nav .nav-link {
     border-width: .5px;
     border-color: rgba(0,0,0,.2);
     font-family: 'Montserrat';
@@ -81,7 +81,7 @@ const Styles = styled.div `
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-  }
+  } */}
     ul {
       list-style: none !important;
     }

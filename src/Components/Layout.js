@@ -3,6 +3,9 @@ import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 
 const Styles = styled.div`
+.container {
+  ${'' /* background-color: red; */}
+}
 
 
 @media only screen and (min-width: 900px) {

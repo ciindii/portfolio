@@ -14,6 +14,8 @@ import NoMatch from './Components/NoMatch';
 import ToggleTab from './Components/Content/Header/SideNav/SideTab/ToggleTab';
 import OverlayBg from './Components/Content/Header/SideNav/SideTab/Overlay';
 
+import Nav from './Components/Content/Nav/Nav';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -22,30 +24,40 @@ import {
 } from 'react-router-dom'
 
 class App extends React.Component {
-  state = {
-    sideTabOpen: false
-  };
-  tabToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideTabOpen: !prevState.sideTabOpen}
-    });
-  }
+  // state = {
+  //   sideTabOpen: false
+  // };
+  //
+  // tabToggleClickHandler = () => {
+  //   this.setState((prevState) => {
+  //     return {sideTabOpen: !prevState.sideTabOpen};
+  //   });
+  // };
+  //
+  // backdropClickHandler = () => {
+  //   this.setState({sideTabOpen: false})
+  // }
+
   render() {
-    let sideTab;
-    let backdrop;
-    if (this.state.sideTabOpen){
-      sideTab = <ToggleTab tabClickHandler={this.tabToggleClickHandler}/>;
-      backdrop =<OverlayBg />;
-    }
+    // let sideTab;
+    // let backdrop;
+    //
+    // if (this.state.sideTabOpen) {
+    //   sideTab = <ToggleTab />;
+    //   backdrop = <OverlayBg click={this.backdropClickHandler} />;
+    // }
     return (
       <React.Fragment>
         <div style={{height: '100%'}}>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
+        {/* <Toolbar tabClickHandler={this.tabToggleClickHandler} />
         {sideTab}
-        {backdrop}
+        {backdrop} */}
 
           {/* <MainNav /> */}
           <Layout>
+            <Nav />
+            <Projectcard />
               <Footer />
           </Layout>
           </div>

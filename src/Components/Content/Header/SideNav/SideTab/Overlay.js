@@ -16,7 +16,7 @@ const Styles = styled.div`
 
 const OverlayBg = props => (
   <Styles>
-    <div className="backdrop"></div>
+    <div className="backdrop" onClick={props.click}></div>
   </Styles>
 );
 export default OverlayBg;

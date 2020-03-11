@@ -5,7 +5,7 @@ import Landing from '../../Landing/Landing';
 import Main from '../../Main/Mainbody';
 import Info from '../../Main/About/Info';
 import Contact from '../../Main/About/Contact';
-import TabToggleBtn from './SideTab/ToggleTab';
+import TabToggleBtn from './SideTab/SideTab';
 import {
   BrowserRouter as Router,
   Route,
@@ -50,14 +50,14 @@ const Styles = styled.div `
 const Toolbar = props => (
   <Styles>
   <header className="toolbar">
+    <Router>
     <nav className="toolbar-nav">
-      <div></div>
+      <div>
+        <TabToggleBtn click={props.tabClickHandler} />
+      </div>
       <div className="toolbar-logo"><Logo /></div>
       <div className="toolbar-links">
-        <Router>
-          <div>
-            <TabToggleBtn click={props.tabClickHandler} />
-          </div>
+
           <ul>
             {/* <div className="logo">
               <Logo />
@@ -80,9 +80,10 @@ const Toolbar = props => (
                         <Route exact path='/About' component={Info}></Route>
                         <Route exact path='/Contact' component={Contact}></Route>
 
-        </Router>
+
       </div>
     </nav>
+    </Router>
   </header>
   </Styles>
 );
