@@ -3,14 +3,14 @@ import './Logo.css'
 import {  MDBNavbarBrand } from 'mdbreact';
 import styled from 'styled-components';
 const Styles = styled.div`
-  .logo {
+  ${'' /* .logo {
     height: 100%;
   }
     @media only screen and (min-width: 900px) {
       .logo {
         height: 20% !important;
       }
-    }
+    } */}
 `;
 // import ctLogo from '../../../img/ctLogo.svg';
 
