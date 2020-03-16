@@ -26,14 +26,14 @@ const Styles = styled.div`
   .flex {
     display: flex;
     margin: 0 auto;
-    width: 250px;
+    width: 100%;
     padding-top: 50px;
   }
   .mr-3 {
     padding: 5px;
     font-size: 13px;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 auto;
     color: gray;
       &:hover {
         opacity: .6;
@@ -46,7 +46,6 @@ const Styles = styled.div`
     bottom: 0;
     width: 100%;
   }
-
 
   @media only screen and (min-width: 425px) {
     .mr-3 {
@@ -79,11 +78,14 @@ const Footer = () => (
             <MDBIcon fab icon="linkedin-in" /> Linkedin
           </a>
         <a href="#!" className="git-ic mr-3">
-          <MDBIcon fab icon="github" /> github
+          <MDBIcon fab icon="github" /> Github
         </a>
         <a href="#!" className="email-ic mr-3">
-          <MDBIcon icon="envelope" /> email
+          <MDBIcon icon="envelope" /> Email
         </a>
+          <a href="#" className="git-ic mr-3">
+            <MDBIcon icon="file-code" /> Resume
+          </a>
       </div>
     </div>
   <div className="copyrightdiv">

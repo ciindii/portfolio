@@ -15,8 +15,9 @@ const Styles = styled.div`
     text-align: right;
     border-bottom: solid 1px gray;
     padding: 10px;
-    padding-top: 50px;
+
     margin-bottom: 40px;
+    margin-top: 70px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 1.1em;
@@ -55,6 +56,10 @@ const Styles = styled.div`
   }
   .mr-3 {
     margin-right: 0px !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+
   }
 
   @media only screen and (min-width: 900px) {

@@ -57,7 +57,6 @@ class App extends React.Component {
           {/* <MainNav /> */}
           <Layout>
             <Nav />
-            <Projectcard />
               <Footer />
           </Layout>
           </div>

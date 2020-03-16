@@ -18,6 +18,7 @@ import {
   Switch,
   Link
 } from 'react-router-dom';
+
 import { MDBIcon, MDBContainer } from 'mdbreact';
 
 const Styles = styled.div `

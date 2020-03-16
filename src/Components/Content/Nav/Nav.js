@@ -2,6 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { MDBIcon, MDBContainer } from 'mdbreact';
 import Logo from '../Header/Logo/Logo';
+import Projectcard from '../Main/Projects/Projectcard';
+import Landing from '../Landing/Landing';
+import Main from '../Main/Mainbody';
+import Info from '../Main/About/Info';
+import Contact from '../Main/About/Contact';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom';
 
 const Styles = styled.div`
   * {
@@ -36,9 +48,9 @@ const Styles = styled.div`
     width: 100%;
     box-sizing: border-box;
   }
-  .nav-item:last-child {
+  ${'' /* .nav-item:last-child {
     margin-top: auto;
-  }
+  } */}
   .nav-link {
     display: flex;
     align-items: center;
@@ -93,12 +105,25 @@ const Styles = styled.div`
       display: none;
     }
 
+    .navbar:hover{
+      width: 100%;
+      transition: none;
+    }
+
+    .navbar:hover .link-text {
+      display: none;
+    }
+
     .navbar-ul {
       flex-direction: row;
     }
 
     .nav-link {
       justify-content: center;
+    }
+    .svg {
+      text-align: center;
+      margin: 0 auto;
     }
 
     main {
@@ -110,7 +135,7 @@ const Styles = styled.div`
     .navbar {
       width: 5rem;
       top: 0;
-      height: 100vh;
+      height: 100%;
     }
 
     .navbar:hover {
@@ -135,43 +160,54 @@ const Styles = styled.div`
 `;
 const Nav = () => (
   <Styles>
+    <Router>
     <div className="navbar">
       <ul className="navbar-ul">
         <li className="logo">
           <Logo />
         </li>
+
         <li className="nav-item">
-          <a href="#" className="nav-link">
-            <MDBIcon className="svg fa-primary fa-secondary" icon="home" />
-            <span class="link-text">Home</span>
-          </a>
+          <Link to="/">
+            <a href="#" className="nav-link">
+              <MDBIcon className="svg fa-primary fa-secondary" icon="home" />
+              <span class="link-text">Home</span>
+            </a>
+          </Link>
         </li>
+
         <li className="nav-item">
+          <Link to="/Projects">
           <a href="#" className="nav-link">
             <MDBIcon className="svg fa-primary fa-secondary" icon="laptop-code" />
             <span class="link-text">Portfolio</span>
           </a>
+          </Link>
         </li>
         <li className="nav-item">
+          <Link to="/About">
           <a href="#" className="nav-link">
             <MDBIcon className="svg fa-primary fa-secondary" icon="laugh" />
             <span class="link-text">About</span>
           </a>
+          </Link>
         </li>
         <li className="nav-item">
+          <Link to="/Contact">
           <a href="#" className="nav-link">
             <MDBIcon className="svg fa-primary fa-secondary" icon="envelope" />
             <span class="link-text">Contact</span>
           </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <MDBIcon className="svg fa-primary fa-secondary" icon="file-code" />
-            <span class="link-text">Resume</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
+
+                    <Route exact path='/' component={Landing}></Route>
+                    <Route exact path='/Projects' component={Projectcard}></Route>
+                    <Route exact path='/About' component={Info}></Route>
+                    <Route exact path='/Contact' component={Contact}></Route>
+    </Router>
   </Styles>
 )
 

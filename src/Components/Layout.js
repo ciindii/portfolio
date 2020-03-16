@@ -12,7 +12,7 @@ const Styles = styled.div`
 
   .container {
     max-width: 900px;
-
+      ${'' /* background-color: blue; */}
   }
 }
 
@@ -20,15 +20,16 @@ const Styles = styled.div`
 
   .container {
     max-width: 1100px;
+      ${'' /* background-color: green; */}
   }
 }
 `;
 const Layout = (props) => (
   <Styles>
-  <Container className="container">
-    {props.children}
-  </Container>
-</Styles>
+    <Container className="container">
+      {props.children}
+    </Container>
+  </Styles>
 )
 
 export default Layout;

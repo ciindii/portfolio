@@ -8,7 +8,6 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   .wrapper {
-    ${'' /* background-color: pink; */}
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -18,14 +17,14 @@ const Styles = styled.div`
 
   }
   .projectdiv {
-    ${'' /* max-width: 300px; */}
     padding: 5px;
     height: 100%;
     padding-bottom: 40px;
-    background-image: radial-gradient(#eee 20%, transparent 20%),
-        radial-gradient(#eee 20%, transparent 20%);
+    background-image:
+      radial-gradient(#eee 20%, transparent 20%),
+      radial-gradient(#eee 20%, transparent 20%);
     background-color: #fff;
-    background-position: 0 0, 10px 10px;
+
     background-size: 10px 10px;
 
   }
@@ -51,6 +50,7 @@ const Styles = styled.div`
     text-transform: uppercase;
     font-size: 1.1em;
     letter-spacing: 1.5px;
+    margin-top: 70px;
   }
   h3 {
     font-size: .85em;
@@ -111,6 +111,17 @@ const Styles = styled.div`
     border-bottom: 1px solid pink;
   }
 
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      width: 80%;
+      padding: 5px;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    h2 {
+      margin-top: 10px;
+    }
+  }
 
   @media only screen and (min-width: 768px) {
     .wrapper {
