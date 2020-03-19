@@ -36,7 +36,7 @@ const Styles = styled.div`
     flex-direction: column;
     align-items: center;
   }
-  button {
+  .button {
     background-color: rgb(206, 132, 96);
     border: none;
     color: white;
@@ -53,7 +53,7 @@ const Styles = styled.div`
         box-shadow: 0 6px 6px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
       }
   }
-  button a {
+  .button a {
     color: #fff;
     font-size: 12px;
     padding: 15px 20px;
@@ -76,17 +76,15 @@ const Styles = styled.div`
     hr {
       width: 20%;
     }
-    button {
+    .button {
       color: white;
       width: 100%;
       opacity: .8;
       padding: 15px 13px;
       text-align: center;
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: 7px;
-    }
-    button a {
       letter-spacing: 1.5px;
     }
   }
@@ -108,18 +106,16 @@ const Contact = () => (
     <div className="wrapper">
       <h2>contact me</h2>
       <div className="contactButton">
-          <button>
-            <a href="mailto:cindythitruong@gmail.com" className="email-ic mr-3">
+
+            <a href="mailto:cindythitruong@gmail.com" className="email-ic mr-3 button">
               <MDBIcon icon="envelope" /> email me </a>
-         </button>
-         <button>
-           <a href="https://www.instagram.com/ciindiicodes/?hl=en" target="_blank"  className="email-ic mr-3">
+
+           <a href="https://www.instagram.com/ciindiicodes/?hl=en" target="_blank"  className="email-ic mr-3 button">
              <MDBIcon fab icon="instagram" /> follow me </a>
-        </button>
-        <button>
-          <a href="#" className="email-ic mr-3">
-            <MDBIcon icon="download" /> Résumé </a>
-       </button>
+
+          <a href="#" className="email-ic mr-3 button">
+            <MDBIcon icon="download" /> résumé </a>
+
       </div>
     </div>
   </Styles>
