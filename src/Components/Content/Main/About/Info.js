@@ -13,14 +13,12 @@ const Styles = styled.div`
 
   }
   h2 {
-    ${'' /* text-align: center;
-    font-family: 'Sacramento', cursive;
-    padding-top: 10px; */}
     color: gray;
     text-align: right;
     border-bottom: solid 1px gray;
     padding: 10px;
     margin-bottom: 40px;
+    margin-top: 70px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 1.1em;
@@ -91,11 +89,13 @@ const Styles = styled.div`
   .mr-3 {
     margin-right: 0px !important;
   }
-
+  @media only screen and (min-width: 600px) {
+    h2 {
+      margin-top: 0px;
+    }
+  }
   @media only screen and (min-width: 900px) {
     .wrapper {
-      position: relative;
-      right: -200px;
       padding-right: 70px;
       margin: 0 auto;
       text-align: center;
@@ -139,12 +139,15 @@ const Styles = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
+    .wrapper {
+      position: relative;
+      right: -5rem;
+    }
     div {
-
       max-width: 600px;
       height: 100%;
       margin: 0 auto;
-
+    }
   }
   @media only screen and (min-width: 1120px) {
 
@@ -163,7 +166,7 @@ const Styles = styled.div`
       font-size: .9em;
       text-align: center;
     }
-
+}
 `;
 
 const Info = () => (

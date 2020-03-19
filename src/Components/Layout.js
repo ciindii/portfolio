@@ -7,7 +7,11 @@ const Styles = styled.div`
   ${'' /* background-color: red; */}
 }
 
-
+@media only screen and (min-width: 600px) {
+  ${'' /* .container {
+    margin-right: 0;
+  } */}
+}
 @media only screen and (min-width: 900px) {
 
   .container {

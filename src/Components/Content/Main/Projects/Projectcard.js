@@ -14,7 +14,7 @@ const Styles = styled.div`
     height: 100%;
     margin: 0 auto;
     padding: 50px;
-
+    box-sizing: border-box;
   }
   .projectdiv {
     padding: 5px;
@@ -92,11 +92,13 @@ const Styles = styled.div`
     padding: 10px 10px 0px 0px;
     border: none;
     border-bottom: solid gray 2px;
-    width: 100px;
+    width: 140px;
+    height: 50px;
     text-align: left;
     &:hover {
       opacity: .6;
       transition: .5s;
+      content: f101; 534530833
     }
   }
 
@@ -125,7 +127,6 @@ const Styles = styled.div`
 
   @media only screen and (min-width: 768px) {
     .wrapper {
-
       display: flex;
       flex-direction: column;
       max-width: 600px;
@@ -153,11 +154,16 @@ const Styles = styled.div`
   }
   @media only screen and (min-width: 900px) {
     .wrapper {
-      ${'' /* margin-left: 400px ; */}
-      position: relative;
-      right: -200px;
       margin: 0 auto;
       padding-right: 70px;
+    }
+  }
+  @media only screen and (min-width: 1060px) {
+    .wrapper {
+      max-width: 750px;
+    }
+    .projectdiv {
+      max-width: 750px;
     }
   }
 `;

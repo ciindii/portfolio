@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MDBIcon, MDBContainer } from 'mdbreact';
 import '../../fonts.css';
-import worldmap from '../../../../img/worldmap.png';
-import avatar from '../../../../img/avatar.png';
+
 const Styles = styled.div`
   div {
     padding: 50px;
@@ -15,7 +14,6 @@ const Styles = styled.div`
     text-align: right;
     border-bottom: solid 1px gray;
     padding: 10px;
-
     margin-bottom: 40px;
     margin-top: 70px;
     font-family: 'Montserrat', sans-serif;
@@ -31,15 +29,21 @@ const Styles = styled.div`
     font-size: 13px;
     line-height: 20px;
   }
+  .contactButton {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   button {
     background-color: rgb(206, 132, 96);
     border: none;
     color: white;
     width: 100%;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
@@ -52,21 +56,15 @@ const Styles = styled.div`
   button a {
     color: #fff;
     font-size: 12px;
-    text-align: center;
+    padding: 15px 20px;
   }
   .mr-3 {
     margin-right: 0px !important;
   }
 
-  @media only screen and (max-width: 600px) {
-
-  }
-
   @media only screen and (min-width: 900px) {
     .wrapper {
       padding-top: 0px;
-      position: relative;
-      right: -200px;
       padding-right: 70px;
       margin: 0 auto;
       margin-bottom: 150px;
@@ -98,7 +96,7 @@ const Styles = styled.div`
       max-width: 600px;
       height: 100%;
       margin: 0 auto;
-
+    }
   }
   @media only screen and (min-width: 1120px) {
   }
@@ -111,15 +109,15 @@ const Contact = () => (
       <h2>contact me</h2>
       <div className="contactButton">
           <button>
-            <a href="#!" className="email-ic mr-3">
+            <a href="mailto:cindythitruong@gmail.com" className="email-ic mr-3">
               <MDBIcon icon="envelope" /> email me </a>
          </button>
          <button>
-           <a href="#!" className="email-ic mr-3">
+           <a href="https://www.instagram.com/ciindiicodes/?hl=en" target="_blank"  className="email-ic mr-3">
              <MDBIcon fab icon="instagram" /> follow me </a>
         </button>
         <button>
-          <a href= {`mailto:cindythitruong@gmail.com`} className="email-ic mr-3">
+          <a href="#" className="email-ic mr-3">
             <MDBIcon icon="download" /> Résumé </a>
        </button>
       </div>

@@ -61,9 +61,7 @@ const Styles = styled.div`
       margin: 0 auto;
       padding: 50px;
       position: relative;
-      ${'' /* right: -200px; */}
       margin: 0 auto;
-      ${'' /* padding-right: 70px; */}
     }
   }
 `;
@@ -77,15 +75,12 @@ const Footer = () => (
         <a href="https://www.linkedin.com/in/cindy-truong-848002156/" target="_blank" className="li-ic mr-3">
             <MDBIcon fab icon="linkedin-in" /> Linkedin
           </a>
-        <a href="#!" className="git-ic mr-3">
+        <a href="https://github.com/ciindii" className="git-ic mr-3">
           <MDBIcon fab icon="github" /> Github
         </a>
-        <a href="#!" className="email-ic mr-3">
+        <a href="mailto:cindythitruong@gmail.com" className="email-ic mr-3">
           <MDBIcon icon="envelope" /> Email
         </a>
-          <a href="#" className="git-ic mr-3">
-            <MDBIcon icon="file-code" /> Resume
-          </a>
       </div>
     </div>
   <div className="copyrightdiv">

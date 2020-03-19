@@ -23,6 +23,7 @@ const Styles = styled.div`
     position: fixed;
     left: 0;
     background-color: var(--bg-primary);
+    padding: 0;
   }
   .navbar .nav-item .nav-link {
     display: flex;
@@ -121,6 +122,9 @@ const Styles = styled.div`
     .nav-link {
       justify-content: center;
     }
+    .nav-item {
+      padding 0 25px;
+    }
     .svg {
       text-align: center;
       margin: 0 auto;
@@ -136,6 +140,7 @@ const Styles = styled.div`
       width: 5rem;
       top: 0;
       height: 100%;
+      padding: 1rem;
     }
 
     .navbar:hover {

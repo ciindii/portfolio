@@ -17,6 +17,7 @@ const Styles = styled.div`
   }
   .landingimg {
     width: 100%;
+    margin-top: 70px;
   }
   h1, p {
       font-family: 'Libre Baskerville';
@@ -35,16 +36,20 @@ const Styles = styled.div`
     font-size: 1.5em;
     color: #494749;
   }
+  @media only screen and (min-width: 600px) {
+    .wrapper {
+      margin-left: 5rem;
+    }
+    .landingimg {
+      margin-top: 0px;
+    }
+  }
   @media only screen and (min-width: 900px) {
     .wrapper {
       color: #efefef;
       text-align: center;
       margin: 0 auto;
       padding: 50px;
-      position: relative;
-      right: -200px;
-      margin: 0 auto;
-      padding-right: 70px;
     }
   }
 `;
